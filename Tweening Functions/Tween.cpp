@@ -27,7 +27,7 @@ float Tween::CubicTweenOut(float t, float sv, float ev)
 {
 	float _t = t;
 	_t--;
-	return ((ev - sv) * (t * t * t + 1)) + sv;
+	return ((sv - ev) * (t * t * t + 1)) + ev;
 }
 
 //smoothly transitions in, than out
