@@ -10,10 +10,32 @@
 	interpolates from sv to ev with t
 	t only goes from 0 - 1, but you can go further if you want
 */
+
+
+
 //basically just a lerp function
 float Tween::LinearTween(float t, float sv, float ev)
 {
 	return ((ev - sv) * t) + sv;
+}
+
+/*
+//smoothly transitions in
+float Tween::QuadTweenIn(float t, float sv, float ev)
+{
+	return ((ev - sv) * t * t) + sv;
+}
+//smoothly transitions in
+float Tween::QuadTweenOut(float t, float sv, float ev)
+{
+	return ((ev - sv) * t * t * t) + sv;
+}
+*/
+
+//smoothly transitions in
+float Tween::CubicTweenIn(float t, float sv, float ev)
+{
+	return ((ev - sv) * t * t * t) + sv;
 }
 
 //smoothly transitions in
