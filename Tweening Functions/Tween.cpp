@@ -14,7 +14,6 @@
 float Tween::LinearTween(float t, float sv, float ev)
 {
 	return ((ev - sv) * t) + sv;
-
 }
 
 //smoothly transitions in

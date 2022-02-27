@@ -1,5 +1,4 @@
 #pragma once
-
 /*
 	How it works
 
@@ -15,6 +14,17 @@ namespace Tween
 {
 	//basically just a lerp function
 	float LinearTween(float t, float sv, float ev);
+
+	//okay funny enough i legit forgot about how I came up with this function, it just like happened ._.
+	/* 
+	how does lerp work?
+	lets look at a simple question
+	we have two numbers -1 and 1 and we want to find the half way point.
+	the halfway point is 0, so, how to we find zero? we would get half of the value between the two points!
+	how do we find half of the value between the two points? first we simplify the question,
+	we turn -1 to 1 to 0 to 2. 
+	*/
+	
 
 	//smoothly transitions in
 	float CubicTweenIn(float t, float sv, float ev);
