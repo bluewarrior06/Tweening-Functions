@@ -18,8 +18,8 @@ namespace Tween
 	//okay funny enough i legit forgot about how I came up with this it just kinda happened ._. 9:32 PM 2/27/2022
 	//oh yeah I just remembered by rethinking it lmao 9:59 PM 2/27/2022
 	//wow its so late, jesus took me an hour to write this?!?!?!?! 12:56 PM 2/27/2022
-	
-	/* 
+
+	/*
 	how does lerp work?
 	lets look at a simple question
 	we have two numbers 24 and 28 and we want to find the half way point.
@@ -35,11 +35,11 @@ namespace Tween
 	you put in lerp(0.75, 24, 25) and got 39?!
 	now you put in -32,32 and put in 0.5, great you got 0!
 	but now you put in 0.25 and still get 0?!?!?!?!?!?!!!! oh um, oh boy...
-	 
+
 	the problem is that a+b makes the numbers grow, and that is not what we want to do. (and that the math is just totally wrong anyways)
 	24+28 is 52, and half of 52 is 26, but the point between 24 and 28 is 26.
 
-	
+
 
 	so lets completely do it differently!
 	(a-b)*t - b
@@ -77,14 +77,14 @@ namespace Tween
 		return ((a-b)*t)-b
 				  ^   ^_ ^_______________________
 			  distance  |						  |
-		        the weight weight                 |
-			    	  	__________________________|
+				the weight weight                 |
+						__________________________|
 take away offset from b to get a point between a and b.
 
 	this fixes issues such as the growing in numbers by essentually normalizing it by using the distance instead of adding the two points
-	
+
 	*/
-	
+
 
 	//smoothly transitions in
 	float CubicTweenIn(float t, float sv, float ev);
