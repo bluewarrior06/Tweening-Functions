@@ -58,3 +58,52 @@ so now lets do the math!<br/>
 ((a+b)*t) + 26<br/>
 -2 + 26<br/>
 
+<h2> Tic80 Snippets for testing</h2>
+``` lua
+
+-- title:  Test Lerp
+-- author: Camixes
+-- desc:   Github example of Lerping and Tween functions
+-- script: lua
+
+p = {{0,0}}
+
+function Lerp(t,a,b)
+	return ((a-b)*t) + b
+end
+
+function Super(t,a,b)
+	return ((a-b)*t*t*t*t*t*t*t*t*t) + b
+end
+
+function SizeofTable()
+	s = 0
+	for i in pairs(p) do
+		s = s + 1
+	end
+	return s
+end
+function TIC()
+	cls()
+	mx,my = mouse()
+	if btnp(4) then
+		table.insert(p,{mx,my})
+	end
+	
+	for i,v in ipairs(p) do
+		print(i .. "x:" .. v[1],0,i*8)
+		print(i .. "y:" .. v[2],64,i*8)
+	end
+	
+	for i,v in pairs(p) do
+		for r=0,1,0.01 do
+			vv = v
+			if (i < SizeofTable(p)) then
+				vv = p[i+1]
+			end
+			pix(Lerp(r,v[1],vv[1]),Lerp(r,v[2],vv[2]),5)
+			pix(Super(r,v[1],vv[1])+4,Super(r,v[2],vv[2])-4,4)
+		end
+	end
+end
+```
