@@ -1,5 +1,7 @@
+- HAVENT TESTED IN C++ YET, DID MY BEST EFFORT TO CONVERT MY LUA TO C++.
 # Tweening-Functions | Lerping | Overall Explanations
                                                                CamiXes
+                                                               
 <h1>First of all, what is lerping?</h1>
 what is lerping?
 lerping is linear interpolation which is shortened to lerp.
