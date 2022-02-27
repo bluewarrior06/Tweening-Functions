@@ -22,12 +22,12 @@ float Tween::CubicTweenIn(float t, float sv, float ev)
 	return ((ev - sv) * t * t * t) + sv;
 }
 
-//smoothly transitions out
+//smoothly transitions out, inverse of In by subtracting from ev instead of sv
 float Tween::CubicTweenOut(float t, float sv, float ev)
 {
 	float _t = t;
 	_t--;
-	return ((sv - ev) * (t * t * t + 1)) + ev;
+	return -(((sv - ev) * (t * t * t + 1)) + ev);
 }
 
 //smoothly transitions in, than out
