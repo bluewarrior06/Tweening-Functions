@@ -28,9 +28,9 @@ a = 24
 b = 28
 t = 0.5
 output = 26
-we start off by getting the distance between a and b                                                  ( A - B )          -->>            ( 24-28) = -4 )
-then we use T to get a percentage of the distance to create an offset to subtract from B            ( (a-b) * T )        -->>         ( (24-26)* 0.5 = -2 )
-now we subtract the OFFSET from B to get the point between a and b!                                ( (a-b)*t - B )	      -->>       ( (24-26)*0.5 - 28 = 26 )
+we start off by getting the distance between a and b                                                  ( A - B )          -->>            ( 24-28) = -4 )\n
+then we use T to get a percentage of the distance to create an offset to subtract from B            ( (a-b) * T )        -->>         ( (24-26)* 0.5 = -2 )\n
+now we subtract the OFFSET from B to get the point between a and b!                                ( (a-b)*t - B )	      -->>       ( (24-26)*0.5 - 28 = 26 )\n
 to make it even simpler, you are just doing -2 - 28 = 26;
 
 
@@ -56,7 +56,7 @@ lerp(t,a,b):_______
 |       |
 return ((a-b)*t)-b
           ^   ^_ ^_______________________
-     distance  |			           			  |
+     distance  |			           			       |
       the weight weight                 |
               __________________________|
 take away offset from b to get a point between a and b.
